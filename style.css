@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --main-color: rgb(33, 131, 33);
+}
+body {
+  background-color: #222;
+  color: white;
+}
+
+::selection {
+  background-color: var(--main-color);
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 970px;
+  }
+  .section .container .img {
+    width: 220px;
+    height: 250px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* start heading  */
+.heading .container {
+  background-color: #eee;
+  display: flex;
+  width: 500px;
+  /* justify-self: center; */
+  justify-content: center;
+  background-color: var(--main-color);
+  box-shadow: 0 5px 30px 0 var(--main-color);
+  position: relative;
+  top: -100px;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+  .heading .container {
+    font-size: 20px;
+    width: calc(400px - 20%);
+  }
+}
+.heading:hover .container {
+  top: 0;
+}
+.heading .container .list ul {
+  list-style-type: none;
+  display: flex;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.heading .container .list ul li a {
+  margin-left: 30px;
+  color: white;
+  text-decoration: none;
+}
+/* end heading  */
+/* strat section  */
+.section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section .intro_text {
+    order: 2;
+  }
+  .section .img {
+    order: 1;
+  }
+}
+.section .container h1 {
+  font-size: 40px;
+}
+.section .container p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 320px;
+}
+.section .container .intro_text {
+  margin-left: 40px;
+  margin-right: 20px;
+  text-align: right;
+}
+.section .container button {
+  width: 300px;
+  height: 50px;
+  background-color: var(--main-color);
+  box-shadow: 0 5px 30px 0 var(--main-color);
+  border: 0;
+  border-radius: 30px;
+  transition: .3s;
+  cursor: pointer;
+}
+.section button:hover{
+  background-color: rgb(35, 100, 35);
+}
+.section .container button:hover{
+  transform: scale(1.1);
+  transition: .3s;
+}
+.section .container button a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.section .img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url(imgs/FB_IMG_1760562049559.jpg);
+  background-color: #ddd;
+  background-size: cover;
+}
+
+/* end section  */
+/* start footer 
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: flex-end;
+} */
+.footer .container {
+  display: flex;
+  justify-content: center;
+}
+.footer .container .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  grid-gap: 10px;
+}
+.footer .container .grid div {
+  border: 2px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 0;
+  transition: 0.3s;
+}
+.footer .container .grid div:hover {
+  bottom: 15px;
+}
+/* end footer  */
